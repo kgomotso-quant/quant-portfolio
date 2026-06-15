@@ -17,7 +17,21 @@ body {
         #020617 100%     /* black base */
     );
 }
+.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.full {
+    width: 100%;
+}
+
+/* NAV BUTTONS */
+.nav-buttons {
+    text-align: center;
+    padding: 30px;
+}
 /* =========================
    HERO SECTION
 ========================= */
