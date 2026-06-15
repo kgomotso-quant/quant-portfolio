@@ -6,87 +6,102 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body class="mc-body">
 
 <div class="hero">
     <h1>Monte Carlo Option Pricing</h1>
-    <p class="subtitle">Quantitative Research Project</p>
+    <p class="subtitle">Quantitative Finance Research Project</p>
 </div>
 
-<div class="grid vertical">
+<div class="research">
 
-    <!-- OVERVIEW -->
-    <div class="panel static full">
+    <!-- SECTION 1 -->
+    <div class="section">
         <h2>Overview</h2>
+        <div class="underline"></div>
         <p>
-            This project focuses on pricing European options using Monte Carlo simulation.
-            It replicates real-world asset price movements using stochastic processes and
-            compares numerical results with the theoretical Black-Scholes model.
+            This project implements a Monte Carlo simulation framework to price European call options.
+            It models asset price dynamics using Geometric Brownian Motion and compares numerical results
+            with the Black-Scholes analytical solution to validate accuracy and convergence.
         </p>
     </div>
 
-    <!-- PROBLEM -->
-    <div class="panel static full">
+    <!-- LARGE IMAGE -->
+    <div class="image-block">
+        <img src="../assets/outputs/montecarlo1.png" alt="Monte Carlo Simulation">
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section">
         <h2>Problem Statement</h2>
+        <div class="underline"></div>
         <p>
-            Financial markets are inherently uncertain and traditional closed-form solutions
-            such as Black-Scholes may not fully capture complex stochastic behavior.
-            The goal was to build a simulation-based pricing engine that can model uncertainty
-            through random sampling and probabilistic paths.
+            Financial derivatives are often priced using closed-form solutions, but real-world uncertainty,
+            stochastic behavior, and non-linear dynamics make analytical models insufficient.
+            The challenge was to build a simulation-based pricing engine that captures randomness in asset paths.
         </p>
     </div>
 
-    <!-- OBJECTIVE -->
-    <div class="panel static full">
-        <h2>Objective</h2>
-        <p>
-            To estimate European call option prices using Monte Carlo simulation
-            and validate results against analytical Black-Scholes pricing.
-        </p>
-    </div>
-
-    <!-- METHODOLOGY -->
-    <div class="panel static full">
+    <!-- SECTION 3 -->
+    <div class="section">
         <h2>Methodology</h2>
+        <div class="underline"></div>
         <p>
-            • Geometric Brownian Motion (GBM) was used to simulate asset paths<br>
-            • Thousands of random price trajectories were generated<br>
-            • Payoffs were discounted back to present value<br>
-            • Results were averaged to estimate option price
+            The model simulates thousands of asset price paths using Geometric Brownian Motion.
+            Each path represents a possible evolution of the underlying asset price over time.
+            Payoffs are calculated at maturity and discounted back to present value.
         </p>
     </div>
 
-    <!-- OUTCOME -->
-    <div class="panel static full">
-        <h2>Results & Outcomes</h2>
+    <!-- IMAGE -->
+    <div class="image-block">
+        <img src="../assets/outputs/montecarlo2.png" alt="Simulation Paths">
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section">
+        <h2>Mathematical Model</h2>
+        <div class="underline"></div>
         <p>
-            The simulation converged toward the Black-Scholes price as the number of paths increased.
-            This demonstrated the effectiveness of Monte Carlo methods in financial modelling.
+            The underlying asset follows:
+        </p>
+
+        <p class="formula">
+            dS = μS dt + σS dW
+        </p>
+
+        <p>
+            Where μ is drift, σ is volatility, and W is a Wiener process.
         </p>
     </div>
 
-    <!-- VISUAL PLACEHOLDER -->
-    <div class="panel static full">
-        <h2>Visual Output</h2>
+    <!-- SECTION 5 -->
+    <div class="section">
+        <h2>Results</h2>
+        <div class="underline"></div>
         <p>
-            (Insert graph here: simulated price paths / convergence graph / payoff distribution)
+            The Monte Carlo estimator converges toward the Black-Scholes price as the number of simulations increases.
+            This confirms the consistency of stochastic simulation methods in derivative pricing.
         </p>
+    </div>
+
+    <!-- LARGE IMAGE -->
+    <div class="image-block">
+        <img src="../assets/outputs/montecarlo3.png" alt="Convergence Graph">
     </div>
 
     <!-- GITHUB -->
-    <a href="https://github.com" class="tile glow-purple full">
-        <h2>View GitHub Repository</h2>
-        <p>Access full Python implementation and code structure</p>
-    </a>
+    <div class="github">
+        <a href="https://github.com" target="_blank">
+            View Full GitHub Code →
+        </a>
+    </div>
 
-</div>
-
-<!-- NAVIGATION BUTTONS -->
-<div class="nav-buttons">
-
-    <a href="../projects.html" class="btn3d">← Back to Projects</a>
-
-    <a href="var-engine.html" class="btn3d">Next Project →</a>
+    <!-- NAV -->
+    <div class="nav">
+        <a href="../projects.html">← Back</a>
+        <a href="var-engine.html">Next Project →</a>
+    </div>
 
 </div>
 
