@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600&display=swap');
 
+/* =========================
+   GLOBAL BACKGROUND (FIXED)
+   BLUE + PURPLE + BLACK BALANCE
+========================= */
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: white;
 
     background: radial-gradient(circle at top left,
-        #1e3a8a 0%,      /* blue */
+        #1e3a8a 0%,      /* soft blue glow */
         #0b1020 35%,     /* deep navy */
-        #1e1b4b 70%,     /* purple */
+        #1e1b4b 70%,     /* purple tone */
         #020617 100%     /* black base */
     );
 }
 
-/* HERO */
+/* =========================
+   HERO SECTION
+========================= */
+
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -29,8 +37,9 @@ body {
 
 h1 {
     font-family: 'Poppins';
-    color: #a855f7;
     font-size: 3rem;
+    color: #a855f7;
+    margin: 10px 0;
 }
 
 .subtitle {
@@ -38,53 +47,87 @@ h1 {
 }
 
 .intro {
-    max-width: 800px;
-    margin: auto;
+    max-width: 850px;
+    margin: 15px auto;
     color: #cbd5e1;
     line-height: 1.6;
 }
 
-/* GRID */
+/* =========================
+   GRID SYSTEM
+========================= */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    gap: 22px;
     padding: 40px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
-/* TILE BASE */
+/* =========================
+   BASE CARD (STATIC)
+========================= */
+
+.panel,
 .tile {
     padding: 22px;
     border-radius: 14px;
-    text-decoration: none;
-    color: white;
-    background: rgba(17, 24, 39, 0.7);
+    background: rgba(17, 24, 39, 0.65);
     border: 1px solid #1e293b;
     transition: all 0.3s ease;
+}
+
+/* STATIC (NOT CLICKABLE LOOK) */
+.static {
+    opacity: 0.75;
+    cursor: default;
+}
+
+/* =========================
+   CLICKABLE TILE SYSTEM
+========================= */
+
+.tile {
+    text-decoration: none;
+    color: white;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
-/* HOVER EFFECT (HEDGE FUND GLOW) */
+/* HOVER LIFT EFFECT */
 .tile:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
 }
 
-/* BLUE GLOW */
+/* =========================
+   BLUE GLOW (SKILLS / CERTS)
+========================= */
+
 .glow-blue:hover {
     border: 1px solid #3b82f6;
-    box-shadow: 0 0 25px rgba(59,130,246,0.5);
+    box-shadow:
+        0 0 20px rgba(59,130,246,0.45),
+        0 0 40px rgba(59,130,246,0.25);
 }
 
-/* PURPLE GLOW */
+/* =========================
+   PURPLE GLOW (PROJECTS)
+========================= */
+
 .glow-purple:hover {
     border: 1px solid #a855f7;
-    box-shadow: 0 0 25px rgba(168,85,247,0.5);
+    box-shadow:
+        0 0 25px rgba(168,85,247,0.5),
+        0 0 45px rgba(59,130,246,0.2);
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS (3D STYLE)
+========================= */
+
 .btn3d {
     display: inline-block;
     padding: 12px 18px;
@@ -93,9 +136,71 @@ h1 {
     background: #2563eb;
     color: white;
     text-decoration: none;
+
     box-shadow: 0 5px #1e3a8a;
+    transition: all 0.2s ease;
 }
 
 .btn3d:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px #1e3a8a;
+}
+
+/* =========================
+   PROJECT README STYLE
+========================= */
+
+.readme-card {
+    display: block;
+    text-align: left;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    color: #a855f7;
+    border: 1px solid #a855f7;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.desc {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.readme-card ul {
+    margin-top: 10px;
+    padding-left: 18px;
+    color: #93c5fd;
+}
+
+.open {
+    display: block;
+    margin-top: 12px;
+    color: #a855f7;
+    font-weight: bold;
+}
+
+/* =========================
+   TEXT STYLING
+========================= */
+
+p {
+    color: #cbd5e1;
+}
+
+h2 {
+    color: #60a5fa;
+}
+
+/* =========================
+   LINK RESET
+========================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
