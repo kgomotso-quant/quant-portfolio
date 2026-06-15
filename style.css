@@ -3,12 +3,14 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: radial-gradient(circle at top,
-        #0b1020,
-        #050816,
-        #020617
-    );
     color: white;
+
+    background: radial-gradient(circle at top left,
+        #1e3a8a 0%,      /* blue */
+        #0b1020 35%,     /* deep navy */
+        #1e1b4b 70%,     /* purple */
+        #020617 100%     /* black base */
+    );
 }
 
 /* HERO */
